@@ -8,7 +8,7 @@ typedef struct node{
 
 void cetak_data(node *hulu){
 	if(hulu == NULL){
-		printf("Maaf! Tiada data dalam senarai tertaut.");
+		printf("Maaf! Tidak ada data dalam senarai tertaut.");
 	}
 	node *penunjuk = hulu;
 	while(penunjuk != NULL){
