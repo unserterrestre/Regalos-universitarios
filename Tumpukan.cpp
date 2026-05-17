@@ -4,7 +4,7 @@ int tumpukan[3]; int unsur_teratas = -1;
 
 void dorong(int bilangan){
     if(unsur_teratas == 2){
-        printf("Tidak bisa memasukkan nilai baru karena tumpukan penuh.\n");
+        printf("Nilai baru tidak bisa dimasukkan karena tumpukan penuh.\n");
     }
 	else{
         unsur_teratas++; tumpukan[unsur_teratas] = bilangan;
