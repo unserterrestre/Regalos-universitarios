@@ -4,7 +4,7 @@ int tumpukan[3]; int unsur_teratas = -1;
 
 void dorong(int bilangan){
     if(unsur_teratas == 2){
-        printf("Nilai baru tidak bisa dimasukkan karena tumpukan penuh.\n");
+        printf("Tidak bisa memasukkan nilai baru karena tumpukan penuh.\n");
     }
 	else{
         unsur_teratas++; tumpukan[unsur_teratas] = bilangan;
@@ -33,17 +33,12 @@ int main() {
 		}
 	}
 	
-	printf("\nMasukkan angka 1 untuk menghilangkan semua unsur atau angka 0 untuk melewatinya: ");
+	printf("\nMasukkan angka 1 untuk menghilangkan semua unsur atau angka lain untuk melewatinya: ");
 	scanf("%d", &masukan);
 	if(masukan == 1){
 		keluar();
 		keluar();
 		keluar();
-	}
-	else if(masukan == 0){
-	}
-	else{
-		printf("Angka tidak bisa diproses oleh program.");
 	}
 	
 	printf("\nTerima kasih telah menggunakan program kami.");
