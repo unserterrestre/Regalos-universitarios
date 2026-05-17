@@ -22,7 +22,7 @@ void keluar(){
     }
 	else{
         printf("Bilangan %d keluar dari antrean.\n", antrean[unsur_terdepan]);
-        unsur_terdepan++; // Menggeser gerbang depan ke orang berikutnya
+        unsur_terdepan++;
     }
 }
 
