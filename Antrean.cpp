@@ -7,9 +7,6 @@ void masuk(int bilangan){
         printf("Unsur baru tidak bisa dimasukkan karena antrean penuh.\n");
     }
 	else{
-    	if(unsur_terdepan == -1){
-			unsur_terdepan = 0;
-		}
         unsur_terbelakang++;
         antrean[unsur_terbelakang] = bilangan;
         printf("Bilangan %d memasuki antrean sebagai unsur ke-%d.\n", bilangan, unsur_terbelakang + 1);
@@ -17,11 +14,11 @@ void masuk(int bilangan){
 }
 
 void keluar(){
-    if(unsur_terdepan == -1 || unsur_terdepan > unsur_terbelakang){
+    if(unsur_terdepan > unsur_terbelakang){
         printf("Tidak ada unsur karena antrean kosong.\n");
     }
 	else{
-        printf("Bilangan %d keluar dari antrean.\n", antrean[unsur_terdepan]);
+        printf("Bilangan %d keluar dari antrean.\n", antrean[unsur_terdepan + 1]);
         unsur_terdepan++;
     }
 }
@@ -37,17 +34,12 @@ int main(){
 		}
 	}
 	
-	printf("\nMasukkan angka 1 untuk menghilangkan semua unsur atau angka 0 untuk melewatinya: ");
+	printf("\nMasukkan angka 1 untuk menghilangkan semua unsur atau nilai lain untuk melewatinya: ");
 	scanf("%d", &masukan);
 	if(masukan == 1){
 		keluar();
 		keluar();
 		keluar();
-	}
-	else if(masukan == 0){
-	}
-	else{
-		printf("Angka tidak bisa diproses oleh program.");
 	}
 	
 	printf("Terima kasih telah menggunakan program kami.");
