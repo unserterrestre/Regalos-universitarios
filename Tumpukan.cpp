@@ -6,9 +6,9 @@ using namespace std;
 int main() {
     stack<int> tumpukan;
     
-    tumpukan.push(10);
-    tumpukan.push(20);
-    tumpukan.push(30);
+    tumpukan.push(100);
+    tumpukan.push(90);
+    tumpukan.push(80);
 
     cout << "Datum yang terletak di tempat teratas ialah " << tumpukan.top() << "." << endl;
     tumpukan.pop();
