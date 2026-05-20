@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() {
+int main(){
     stack<int> tumpukan;
     
     tumpukan.push(100);
