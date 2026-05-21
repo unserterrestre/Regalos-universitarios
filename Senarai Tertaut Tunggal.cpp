@@ -1,5 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
 
 typedef struct node{
 	int data;
@@ -8,12 +10,15 @@ typedef struct node{
 
 void cetak_data(node *hulu){
 	if(hulu == NULL){
-		printf("Maaf! Tidak ada data dalam senarai tertaut.");
+		cout << "Maaf! Tiada data dalam senarai tertaut.";
+		return;
 	}
+
 	node *penunjuk = hulu;
+
 	while(penunjuk != NULL){
-		printf("%d\n", penunjuk -> data);
-		penunjuk = penunjuk -> tautan;
+		cout << penunjuk->data << "\n";
+		penunjuk = penunjuk->tautan;
 	}
 }
 
@@ -26,14 +31,14 @@ int main(){
 	data_terkini -> data = 99;
 	data_terkini -> tautan = NULL;
 	hulu -> tautan = data_terkini;
-	
+
 	data_terkini -> tautan = (node*)malloc(sizeof(node));
 	data_terkini = data_terkini -> tautan;
 	data_terkini -> data = 98;
 	data_terkini -> tautan = NULL;
-	
-	printf("Data yang tersimpan:\n");
+
+	cout << "Data yang tersimpan:\n";
 	cetak_data(hulu);
-	
+
 	return 0;
 }
