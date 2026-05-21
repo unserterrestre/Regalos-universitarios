@@ -13,9 +13,7 @@ void cetak_data(node *hulu){
 		cout << "Maaf! Tiada data dalam senarai tertaut.";
 		return;
 	}
-
 	node *penunjuk = hulu;
-
 	while(penunjuk != NULL){
 		cout << penunjuk->data << "\n";
 		penunjuk = penunjuk->tautan;
